@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css"> 
+    <title>Formulário</title>   
+</head>
+
+<script src="script.js"></script>
+
+<body>
+    <div class="container">
+        <div class="form-image">
+            <img src="assets/img/undraw_exams_re_4ios.svg" alt="">
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Inscreva-se</h1>
+                    </div>
+                </div>
+<!-- Inicial seção -->
+                <div id="sectionStart" class="section" style="display: block;">
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="completeName">Nome Completo</label>
+                            <input id="completeName" type="text" name="completeName" placeholder="Digite seu Nome Completo" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="number">Celular</label>
+                            <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="semestre">Em qual semestre você ingressou<br>na universidade?</label>
+                            <input id="semestre" type="semestre" name="semestre" placeholder="ex.: 2023.2" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="confirmCourse">Qual o seu curso?</label>
+                            <input id="confirmCourse" type="course" name="confirmCourse" placeholder="Digite o nome do curso" required>
+                        </div>
+                    </div>
+                    <button type="button" onclick="showNextSection('sectionStart')">Próximo</button>
+                </div>
+<!-- Primeira Seção -->
+                <div id="section1" class="section">
+                    <div class="idade-inputs">
+                        <div class="idade-title">
+                            <h6>Sua idade</h6>
+                        </div>
+                        <div class="idade-group">
+                            <div class="idade-input">
+                                <input id="idade1" type="radio" name="idade" value="17-24" required>
+                                <label for="idade1">17 - 24 anos</label>
+                            </div>
+                            <div class="idade-input">
+                                <input id="idade2" type="radio" name="idade" value="25-34" required>
+                                <label for="idade2">25 - 34 anos</label>
+                            </div>
+                            <div class="idade-input">
+                                <input id="idade3" type="radio" name="idade" value="35-44" required>
+                                <label for="idade3">35 - 44 anos</label>
+                            </div>
+                            <div class="idade-input">
+                                <input id="idade3" type="radio" name="idade" value="35-44" required>
+                                <label for="idade3">45</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gender-inputs">
+                        <div class="gender-title">
+                            <h6>Você é:</h6>
+                        </div>
+                        <div class="gender-group">
+                            <select id="gender-group" name="gender-group" required>
+                                <option value="">Selecione...</option>
+                                <option >Mulher cisgênera</option>
+                                <option >Mulher transgênera</option>
+                                <option >Pessoa não-binária que se identifica com a mulheridade/feminilidade</option>
+                                <option >Pessoa de gênero fluido que se identifica com a mulheridade/feminilidade</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="course-inputs">
+                        <div class="course-title">
+                            <h6>De qual cidade é seu curso?</h6>
+                        </div>
+                        <div class="course-group">
+                            <select id="course-group" name="course-group" required>
+                                <option >Selecione...</option>
+                                <option >Salvador</option>
+                                <option >Camaçari</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="place-inputs">
+                        <div class="place-title">
+                            <h6>Onde mora?</h6>
+                        </div>
+                        <div class="place-group">
+                            <select id="place-group" name="place-group" required>
+                                <option value="">Selecione...</option>
+                                <option >Salvador</option>
+                                <option >Camaçari</option>
+                                <option >Dias D'Vila</option>
+                                <option >Simões Filho</option>
+                                <option >Lauro de Freitas</option>
+                                <option >Outros</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="area-inputs">
+                        <div class="area-title">
+                            <h6>De qual equipe do Clube você tem mais interesse? (seção 5 do edital)</h6>
+                        </div>
+                        <div class="question-group">
+                            <select id="question-group" name="question-group" required>
+                                <option value="">Selecione...</option>
+                                <option value="A">Equipe de Comunicação e Design</option>
+                                <option value="B">Equipe de Capacitação e Projeto</option>
+                                <option value="C">Financeiro e Administrativo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="button" onclick="showNextSection('section1')">Próximo</button>
+                </div>
+                
+<!-- Segunda seção -->
+                <div id="section2" class="section">
+                    <div class="areaI-inputs">
+                        <div class="area-title">
+                            <h6>Qual seu maior interesse em comunicação?</h6>
+                        </div>
+                        <div class="area-group">
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="area">
+                                <label for="area">Criação e Edição de Conteúdo</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Gestão de Sites e Redes Sociais</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areaII-inputs">
+                        <div class="area-title">
+                            <h6>Com quais ferramentas de criação de conteúdo você tem familiaridade?</h6>
+                        </div>
+                        <div class="area-group">
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="area">
+                                <label for="area">Canva</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Photoshop</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Capcut</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Kinemaster</label>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="others">Outros</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" onclick="showNextSection('section2')">Próximo</button>
+                </div>
+<!-- Terceira seção -->
+                <div id="section3" class="section">
+                    <div class="areaI-inputs">
+                        <div class="area-title">
+                            <h6>Qual área você tem mais interesse em se dedicar no projeto?</h6>
+                        </div>
+                        <div class="area-group">
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="area">
+                                <label for="area">Modelagem e Eletrônica|Eletrica|Hardware</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Modelagem e Mecânica</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Programação</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Capacitação</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areaII-inputs">
+                        <div class="area-title">
+                            <h6>Com quais áreas você tem familiaridade?</h6>
+                        </div>
+                        <div class="area-group">
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="area">
+                                <label for="area">Eletrônica e Eletrica</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Prototipagem rápida (Arduino,Esp32, Raspberry)</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Sensores</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Atuadores</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">ROS</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Git / GitHub</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Programação</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Front-End</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Back-End</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Inteligência Artificial</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Machine Learning</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">PLN</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Visão Computacional</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areaIII-inputs">
+                        <div class="area-title">
+                            <h6>Informe aqui quais linguagens de programação você tem familiaridade. (independente do grau de conhecimento)</h6>
+                        </div>
+                        <div class="area-group">
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="area">
+                                <label for="area">C/C++</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Javascript</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Python</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">R</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="others">Outras</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" onclick="showNextSection('section3')">Próximo</button>
+                </div>
+ <!-- Quarta seção -->
+                <div id="section4"  class="section">
+                    <div class="areaI-inputs">
+                        <div class="area-title">
+                            <h6>Você possui algum curso ou experiência nesta área?</h6>
+                        </div>
+                        <div class="area-group">
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="area">
+                                <label for="area">Sim</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Nao</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="areaII-inputs">
+                        <div class="area-title">
+                            <h6>Com quais ferramentas de gestão administrativa você conhece?</h6>
+                        </div>
+                        <div class="area-group">
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="area">
+                                <label for="area">Planilhas</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Notion</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">PowerBI para Dashboard e Analise de dados</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Python para Dashboard e Analise de dados</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Scrum</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">Metodologias Ageis</label>
+                            </div>
+                            <div class="area-input">
+                                <input id="area" type="checkbox" name="course">
+                                <label for="course">OKRS</label>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" onclick="showNextSection('section4')">Próximo</button>
+                </div>
+ <!-- Quinta seção -->
+                <div id="sectionFinal" class="section">
+                    <div class="knowledges-inputs">
+                        <div class="area-title">
+                            <h6>Como você acha que poderia contribuir os conhecimentos selecionados acima? </h6>
+                        </div>
+                        <div class="input-box">
+                            <textarea id="knowledges" name="resposta" rows="6" cols="50" placeholder="Escreva sua resposta aqui..." required></textarea><br><br>
+                        </div>
+                    </div>
+                    <div class="objectives-inputs">
+                        <div class="area-title">
+                            <h6>Conte-nos mais...Qual o seu objetivo ao entrar no Clube RobôChicas?</h6>
+                        </div>
+                        <div class="input-box">
+                            <textarea id="objectives" name="resposta" rows="6" cols="50" placeholder="Escreva sua resposta aqui..." required></textarea><br><br>
+                        </div>
+                    </div>
+                    <div class="cv-inputs">
+                        <div class="cv-title">
+                            <h6>Anexe aqui seu currículo</h6>
+                        </div>
+                        <div class="cv-box">
+                            <label for="cv"></label>
+                            <input id="cv" type="file" accept=".doc,.docx,.pdf" name="cv"  required>
+                        </div>
+                    </div>
+                    <div class="send-button">
+                        <button><a href="#">Enviar</a> </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
