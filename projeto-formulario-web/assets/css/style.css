@@ -173,7 +173,7 @@ input[type="file"] {
     justify-content: center;
     align-items: center;
     background-color: #d479a4;
-    ;
+    border-radius: 10px;
     padding: 1rem;
 }
 
