@@ -9,9 +9,7 @@ Esse repositorio reúne alguns dos principais projetos que eu desenvolvi durante
 **Front-end:** 
  - Figma
  - Javascript 
- - Typescript
  - HTML/CSS
- - React 
  - TailwindCSS
 
 
